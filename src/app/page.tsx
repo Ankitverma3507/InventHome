@@ -75,32 +75,7 @@ export default function Page() {
   ]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<null | string>(null);
-  // useEffect(() => {
-  //   const fetchAllPages = async () => {
-  //     setIsLoading(true);
-  //     setError(null);
-
-  //     const urls = [];
-  //     for (let page = 1; page <= 8; page++) {
-  //       urls.push(`https://swapi.dev/api/people?page=${page}`);
-  //     }
-
-  //     try {
-  //       const responses = await Promise.all(urls.map(url => fetch(url)));
-  //       const jsonData = await Promise.all(responses.map(response => response.json()));
-  //       const allResults = jsonData.flatMap(data => data.results);
-  //       setData(allResults);
-  //     } catch (error) {
-  //       console.error('Error fetching data:', error);
-  //       setError('Error fetching data. Please try again.');
-  //     } finally {
-  //       setIsLoading(false);
-  //     }
-  //   };
-
-  //   fetchAllPages();
-  // }, []);
-
+  
 
   return (
     <InventoryProvider>

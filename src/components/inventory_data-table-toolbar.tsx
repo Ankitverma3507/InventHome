@@ -32,7 +32,7 @@ export function InDataTableToolbar<TData>({
   const isFiltered = table.getState().columnFilters.length > 0
 
   return (
-    <div className="flex sm:flex-col sm:gap-2 sm:items-start items-center justify-between text-black">
+    <div className="flex  gap-2 flex-col items-start md:flex-row md:items-center justify-between text-black">
       <div className="flex flex-1 items-center space-x-2">
         <Input
           placeholder="Search for your Item..."

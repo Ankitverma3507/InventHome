@@ -50,13 +50,7 @@ export const columns: ColumnDef<Entity>[] = [
         <DataTableColumnHeader column={column} title="Quantity" />
       ),
   },
-  // {
-  //   accessorKey: "hair_color",
-  //   enableSorting: false,
-  //   header: ({ column }) => (
-  //       <DataTableColumnHeader column={column} title="Hair Color" />
-  //     ),
-  // },
+  
 ]
 
 

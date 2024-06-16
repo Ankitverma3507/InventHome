@@ -40,7 +40,7 @@ export const columns: ColumnDef<Inventory>[] = [
             <DataTableColumnHeader column={column} title="Status" />
         ),
         cell: ({ row }) => {
-            // Calculate the status based on the stock value
+            
             const stock = row.getValue("stock") as number;
             const status = stock > 0 ? "Available" : "Not Available";
             const statusColor = stock > 0 ? "text-green-500" : "text-red-500";
@@ -54,7 +54,7 @@ export const columns: ColumnDef<Inventory>[] = [
             )
         },
         filterFn: (row, id, value) => {
-            // Adjust the filter function to match the calculated status
+            
             const stock = row.getValue("stock") as number;
             const status = stock > 0 ? "Available" : "Not Available";
             return value.includes(status);

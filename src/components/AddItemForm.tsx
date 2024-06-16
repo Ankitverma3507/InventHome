@@ -5,17 +5,17 @@ import { InventoryProvider, useInventory } from "@/app/context/context"
 const AddItemForm: React.FC = () => {
     const [itemName, setItemName] = useState('');
     const [itemStock, setItemStock] = useState(0);
-    const { products, setProducts, addProduct } = useInventory(); // Adding setProducts to context
+    const { products, setProducts, addProduct } = useInventory(); 
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         const newItem = {
-            id: products.length + 1, // Simple unique id generation
+            id: products.length + 1, 
             name: itemName,
             stock: itemStock,
         };
-        addProduct(newItem); // Add new item to context
-        setItemName(''); // Clear form fields
+        addProduct(newItem); 
+        setItemName(''); 
         setItemStock(0);
     };
 

@@ -23,12 +23,12 @@ export function DialogDemo({ isOpen, onClose, onSave }: DialogDemoProps) {
     const [itemStock, setItemStock] = useState(0);
     const handleSave = () => {
         onSave(itemName, itemStock);
-        onClose();  // Close dialog after saving changes
+        onClose();  
       };
     return (
         <Dialog open={isOpen} onOpenChange={onClose}>
             <DialogTrigger asChild>
-                {/* <span className="border-none text-left cursor-pointer w-full">Edit</span> */}
+                
             </DialogTrigger>
             <DialogContent className="sm:max-w-[425px]">
                 <DialogHeader>

@@ -1,6 +1,6 @@
-// Dialog.tsx
+
 import React, { ReactNode } from 'react';
-// import './Dialog.css'; // Assuming you will create some basic styles
+
 
 interface DialogProps {
     isOpen: boolean;

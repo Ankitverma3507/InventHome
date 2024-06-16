@@ -34,7 +34,7 @@ export function DataTableToolbar<TData>({
     <div className="flex items-center justify-between text-black">
       <div className="flex flex-1 items-center space-x-2">
         <Input
-          placeholder="Search for your favourite character..."
+          placeholder="Search for your Item..."
           value={(table.getColumn("customer")?.getFilterValue() as string) ?? ""}
           onChange={(event) =>
             table.getColumn("customer")?.setFilterValue(event.target.value)

@@ -22,7 +22,6 @@ export function Management() {
         <div>
           <div className="container mx-auto">
             <div className="mb-8">
-              {/* <h2 className="text-xl font-bold mb-4 text-muted">Inventory List</h2> */}
               <div className="container mx-auto py-3 text-white">
                 {
                   <DataTable columns={columns} data={products} />
