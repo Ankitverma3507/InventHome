@@ -18,11 +18,12 @@ export function Management() {
   return (
     <div className="flex flex-col min-h-screen">
       <Newnav />
-      <main className="flex-1 py-8 px-6 md:px-8 lg:px-10">
+      <main className="flex-1">
         <div>
-          <div className="container mx-auto">
-            <div className="mb-8">
+          <div className="container ">
+            <div className="">
               <div className="container mx-auto py-3 text-white">
+              <h2 className="text-xl font-bold mb-4 text-muted">Inventory List</h2>
                 {
                   <DataTable columns={columns} data={products} />
                 }
