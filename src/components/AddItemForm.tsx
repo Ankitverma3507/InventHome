@@ -20,7 +20,7 @@ const AddItemForm: React.FC = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit} className='mb-48' >
+        <form onSubmit={handleSubmit} className='' >
             <div>
                 <label>
                     Item Name:

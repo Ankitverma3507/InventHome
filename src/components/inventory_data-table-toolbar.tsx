@@ -35,7 +35,7 @@ export function InDataTableToolbar<TData>({
     <div className="flex items-center justify-between text-black">
       <div className="flex flex-1 items-center space-x-2">
         <Input
-          placeholder="Search for your favourite character..."
+          placeholder="Search for your Item..."
           value={(table.getColumn("name")?.getFilterValue() as string) ?? ""}
           onChange={(event) =>
             table.getColumn("name")?.setFilterValue(event.target.value)

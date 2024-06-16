@@ -22,7 +22,8 @@ import { labels } from "../data/data"
 import { Inventory } from "../data/schema"
 import { InventoryProvider, useInventory } from "../app/context/context"
 import { use } from "react"
-import { useContext } from "react"
+import { useContext,useState } from "react"
+import { DialogDemo } from "./editProfile"
 
 
 interface DataTableRowActionsProps<TData> {
@@ -42,14 +43,14 @@ export function DataTableRowActions<TData>(
     deleteProduct(product.id);
   };
 
-  const handleEdit = () => {
-    // Logic to edit the product. This could involve opening a modal with a form.
-    // Example:
-    const updatedProduct = { name: "Updated Name", stock: 10 }; // This should come from user input
+  const handleEdit = (name: string, stock: number) => {
+    const updatedProduct = { name, stock };
     editProduct(product.id, updatedProduct);
   };
   
-  
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const openDialog = () => setIsDialogOpen(true);
+  const closeDialog = () => setIsDialogOpen(false);
   return (
     <>
     
@@ -65,9 +66,11 @@ export function DataTableRowActions<TData>(
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end" className="w-[160px]">
-          <DropdownMenuItem onClick={handleEdit}>Edit</DropdownMenuItem>
+        <DropdownMenuItem onClick={openDialog}>
+            Edit
+          </DropdownMenuItem>
 
-          <DropdownMenuItem onClick={handleDelete}>
+          <DropdownMenuItem onClick={handleDelete} className="cursor-pointer">
             Delete
             <DropdownMenuShortcut>⌘⌫</DropdownMenuShortcut>
           </DropdownMenuItem>
@@ -75,7 +78,11 @@ export function DataTableRowActions<TData>(
       </DropdownMenu>
 
     
-
+      <DialogDemo
+        isOpen={isDialogOpen}
+        onClose={closeDialog}
+        onSave={handleEdit}
+      />
     </>
   )
 }
