@@ -1,19 +1,17 @@
 "use client";
-import Link from "next/link"
-import { useEffect, useState } from "react"
+
+import {  useState } from "react"
 import { Newnav } from "./newnav"
-import { Inventory } from "@/data/schema"
 import { columns } from "../inventory_column"
 import { DataTable } from "../inventory_data-table"
-import { InventoryProvider, useInventory } from "@/app/context/context"
+import { useInventory } from "@/app/context/context"
 export function Management() {
 
   const {products}=useInventory();
 
 
 
-  const[itemname,setItemname]= useState("");
-  const[stock,setStock]= useState("0");
+
 
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<null | string>(null);

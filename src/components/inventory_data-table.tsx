@@ -26,8 +26,6 @@ import {
 
 import { DataTablePagination } from "@/components/data-table-pagination"
 import { useState } from "react"
-import InSheetRow from "./inventory_sheet-row"
-// import { DataTableToolbar } from "@/components/data-table-toolbar"
 import { InDataTableToolbar } from "@/components/inventory_data-table-toolbar"
 
 interface DataTableProps<TData, TValue> {
