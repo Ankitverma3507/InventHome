@@ -5,8 +5,8 @@ import { Table } from "@tanstack/react-table"
 
 import { Button } from "../components/ui/button"
 import { Input } from "../components/ui/input"
-// import { DataTableFacetedFilter } from "./data-table-faceted-filter"
 import { InDataTableFacetedFilter } from "./inventory_data-table-faceted-filter"
+import Additembutton from "./additembutton"
 
 interface DataTableToolbarProps<TData> {
   table: Table<TData>
@@ -58,6 +58,10 @@ export function InDataTableToolbar<TData>({
             <Cross2Icon className="ml-2 h-4 w-4" />
           </Button>
         )}
+      </div>
+
+      <div>
+        <Additembutton />
       </div>
     </div>
   )

@@ -45,7 +45,7 @@ const SheetRow: FC<SheetRowProps> = ({ row }) => {
                     <SheetDescription className="grid md:grid-cols-4 gap-5">
                         {entityData.items.map((item)=>{
                             return (
-                                <FilmCard  key={item.id} />
+                                <FilmCard  key={item.id} item={item} />
                             )
                         })}
                     </SheetDescription>
